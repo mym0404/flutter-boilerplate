@@ -1,4 +1,5 @@
-import '../../common/util/settings_mixin.dart';
+import 'package:local_file_preferences/local_file_preferences.dart';
+
 import '../../export.dart';
 
 part 'color_settings.freezed.dart';
@@ -16,13 +17,15 @@ class ColorSettingsData with _$ColorSettingsData {
       _$ColorSettingsDataFromJson(json);
 }
 
-class ColorSettings with SettingsMixin<ColorSettingsData> {
+class ColorSettings with LocalFilePrefMixin<ColorSettingsData> {
   @override
   ColorSettingsData get fallback => const ColorSettingsData();
 
   @override
   String get fileName => 'color_settings.dat';
 
+  @override
+  Map<String, dynamic> toJson() => value.toJson();
   @override
   ColorSettingsData fromJson(Json json) => ColorSettingsData.fromJson(json);
 

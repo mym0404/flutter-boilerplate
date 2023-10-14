@@ -1,12 +1,18 @@
+import 'package:flutter_localizations/flutter_localizations.dart';
+
 import '../../design/color/color_settings.dart';
 import '../../design/theme.dart';
 import '../../export.dart';
 import '../../feature/home/ui/page/home_page.dart';
 import '../../l10n/util/l10n_settings.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
-class BootStrap extends StatelessWidget with WatchItMixin {
-  const BootStrap({super.key});
+Future<void> bootStrap() async {
+  await registerSingletons();
+  runApp(const BootStrapApp());
+}
+
+class BootStrapApp extends StatelessWidget with WatchItMixin {
+  const BootStrapApp({super.key});
 
   @override
   Widget build(BuildContext context) {

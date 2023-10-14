@@ -1,4 +1,5 @@
-import '../../common/util/settings_mixin.dart';
+import 'package:local_file_preferences/local_file_preferences.dart';
+
 import '../../export.dart';
 
 enum L10NSettingsValue {
@@ -7,11 +8,10 @@ enum L10NSettingsValue {
   ;
 
   final Locale locale;
-
   const L10NSettingsValue(this.locale);
 }
 
-class L10NSettings with SettingsMixin<L10NSettingsValue> {
+class L10NSettings with LocalFilePrefMixin<L10NSettingsValue> {
   L10NSettings() {
     S.load(load().locale);
   }
@@ -24,9 +24,7 @@ class L10NSettings with SettingsMixin<L10NSettingsValue> {
   String get fileName => 'L10N_settings.dat';
 
   @override
-  Json toJson() {
-    return {'locale': value.name};
-  }
+  Json toJson() => {'locale': value.name};
 
   @override
   L10NSettingsValue fromJson(Json json) =>

@@ -9,7 +9,7 @@ part of 'color_settings.dart';
 _$ColorSettingsDataImpl _$$ColorSettingsDataImplFromJson(
         Map<String, dynamic> json) =>
     _$ColorSettingsDataImpl(
-      isDarkMode: json['isDarkMode'] as bool? ?? false,
+      isDarkMode: json['isDarkMode'] as bool? ?? true,
     );
 
 Map<String, dynamic> _$$ColorSettingsDataImplToJson(
