@@ -1,6 +1,6 @@
 export 'dart:async';
 export 'dart:convert';
-export 'dart:math';
+export 'dart:math' hide log;
 
 export 'package:collection/collection.dart';
 export 'package:flutter/foundation.dart' hide binarySearch, mergeSort;
@@ -18,6 +18,7 @@ export 'common/util/local_storage.dart';
 export 'design/typography/text_style.dart';
 export 'l10n/generated/l10n.dart';
 export 'l10n/util/l10n_util.dart';
+export 'service/di/singleton.dart';
 
 typedef VC = void Function();
 typedef Json = Map<String, dynamic>;

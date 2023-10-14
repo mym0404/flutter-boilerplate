@@ -6,7 +6,7 @@
 
 </div>
 
-# Flutter Boilerplate
+# Flutter Simple Boilerplate
 
 A simple boilerplate project for the new Flutter application.
 

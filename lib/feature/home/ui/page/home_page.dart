@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
-          children: [IconButton(onPressed: () {}, icon: Icon(Icons.account_box_sharp))],
+          children: [IconButton(onPressed: () {}, icon: const Icon(Icons.account_box_sharp))],
         ),
       ),
       floatingActionButton: FloatingActionButton(

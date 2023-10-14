@@ -1,4 +1,4 @@
-import '../../common/util/save_load_mixin.dart';
+import '../../common/util/settings_mixin.dart';
 import '../../export.dart';
 
 enum L10NSettingsValue {

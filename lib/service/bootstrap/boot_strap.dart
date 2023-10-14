@@ -1,10 +1,9 @@
-import 'package:flutter_localizations/flutter_localizations.dart';
-
 import '../../design/color/color_settings.dart';
 import '../../design/theme.dart';
 import '../../export.dart';
 import '../../feature/home/ui/page/home_page.dart';
 import '../../l10n/util/l10n_settings.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class BootStrap extends StatelessWidget with WatchItMixin {
   const BootStrap({super.key});

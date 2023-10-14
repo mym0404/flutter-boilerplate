@@ -1,4 +1,4 @@
-import '../../../export.dart';
+import '../../export.dart';
 import 'json_file.dart';
 import 'throttler.dart';
 
@@ -23,8 +23,7 @@ mixin SettingsMixin<T> {
     try {
       await _file.save(toJson());
     } on Exception catch (e) {
-      assert(false);
-      debugPrint(e.toString());
+      log.e('failed save', error: e);
     }
   }
 
@@ -36,8 +35,7 @@ mixin SettingsMixin<T> {
     try {
       return (data.value as dynamic).toJson() as Json;
     } catch (e) {
-      assert(false, 'failed toJson in ThrottledSaveLoadMixin');
-      debugPrint(e.toString());
+      log.e('failed toJson', error: e);
       return {};
     }
   }

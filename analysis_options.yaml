@@ -52,8 +52,8 @@ linter:
   # producing the lint.
   rules:
     prefer_single_quotes: true
-    always_use_package_imports: false
     prefer_relative_imports: true
+    always_use_package_imports: false
     avoid_relative_lib_imports: true
     always_declare_return_types: true
     annotate_overrides: true
