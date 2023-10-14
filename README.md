@@ -37,6 +37,8 @@ Add a gap within `Column` or `Row` easily
 
 Generate Splash screen codes automatically for each platforms
 
+- [flutter_launcher_icons](https://pub.dev/packages/flutter_launcher_icons)
+
 ### Routing
 
 - [go_router](https://pub.dev/packages/go_router)
@@ -93,6 +95,12 @@ flutter pub run intl_utils:generate
 
 # generate ...
 flutter pub run build_runner build --delete-conflicting-outputs
+
+# generate launcher icon
+flutter pub run flutter_launcher_icons
+
+# generate splash screen
+flutter pub run flutter_native_splash:create
 ```
 
 

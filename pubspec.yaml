@@ -63,6 +63,7 @@ dev_dependencies:
   intl_utils: ^2.8.4
   flutter_gen_runner: ^5.3.2
   json_serializable: ^6.7.1
+  flutter_launcher_icons: ^0.13.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
