@@ -29,12 +29,12 @@ class ColorSettings with LocalFilePrefMixin<ColorSettingsData> {
   @override
   ColorSettingsData fromJson(Json json) => ColorSettingsData.fromJson(json);
 
-  bool get isDarkMode => data.value.isDarkMode;
+  bool get isDarkMode => value.isDarkMode;
   ColorScheme get colorScheme => isDarkMode ? _appColorSchemeDark : _appColorSchemeLight;
 
   ColorScheme getColorSchemeByBrightness(Brightness brightness) =>
       brightness == Brightness.light ? _appColorSchemeLight : _appColorSchemeDark;
 
-  void setDarkMode(bool isDarkMode) => data.value = value.copyWith(isDarkMode: isDarkMode);
-  void toggleDarkMode() => data.value = data.value.copyWith(isDarkMode: !data.value.isDarkMode);
+  void setDarkMode(bool isDarkMode) => value = value.copyWith(isDarkMode: isDarkMode);
+  void toggleDarkMode() => value = value.copyWith(isDarkMode: !isDarkMode);
 }

@@ -24,3 +24,5 @@ Future<void> registerSingletons() async {
     ),
   );
 }
+
+Logger get log => di();

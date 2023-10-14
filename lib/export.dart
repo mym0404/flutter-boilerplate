@@ -14,6 +14,7 @@ export 'package:intl/intl.dart' hide TextDirection;
 export 'package:shared_preferences/shared_preferences.dart';
 export 'package:watch_it/watch_it.dart';
 
+export 'common/ui/widget/app_scaffold.dart';
 export 'common/util/local_storage.dart';
 export 'design/typography/text_style.dart';
 export 'l10n/generated/l10n.dart';

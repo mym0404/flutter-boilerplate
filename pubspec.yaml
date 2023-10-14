@@ -46,7 +46,7 @@ dependencies:
   freezed_annotation: ^2.4.1
   shared_preferences: ^2.2.2
   json_annotation: ^4.8.1
-  local_file_preferences: ^0.0.6
+  local_file_preferences: ^1.0.0
 
 dev_dependencies:
   flutter_test:

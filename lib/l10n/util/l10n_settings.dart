@@ -33,6 +33,8 @@ class L10NSettings with LocalFilePrefMixin<L10NSettingsValue> {
 
   Future<void> changeLocale(L10NSettingsValue value) async {
     await S.load(value.locale);
-    data.value = value;
+    this.value = value;
   }
+
+  Locale get locale => value.locale;
 }

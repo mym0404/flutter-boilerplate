@@ -489,10 +489,10 @@ packages:
     dependency: "direct main"
     description:
       name: local_file_preferences
-      sha256: da646b33f4c89b65df75dd588d44d4c48b96ef2fe21a48714b34a95b89cb9733
+      sha256: d5eb3f80bb053c2b6faf5e88651f3f92f25e2d78ca57c14575f310b55b2ec826
       url: "https://pub.dev"
     source: hosted
-    version: "0.0.6"
+    version: "1.0.0"
   logger:
     dependency: "direct main"
     description:
