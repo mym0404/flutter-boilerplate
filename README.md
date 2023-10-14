@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://github.com/mym0404"><img alt="GitHub: mym0404" src="https://img.shields.io/github/followers/mym0404?label=Follow&style=social" /></a>
-<a href="https://github.com/mym0404/flutter_boilerplate"><img src="https://img.shields.io/github/stars/mym0404/flutter_boilerplate?style=social" /></a>
+<a href="https://github.com/mym0404/flutter-boilerplate"><img src="https://img.shields.io/github/stars/mym0404/flutter_boilerplate?style=social" /></a>
 <a href="https://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/License-MIT-yellow.svg"/></a>
 
 </div>
