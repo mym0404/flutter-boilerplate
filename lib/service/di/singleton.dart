@@ -14,10 +14,10 @@ Future<void> registerSingletons() async {
       printer: PrefixPrinter(
         PrettyPrinter(
           colors: false,
-          methodCount: 2,
         ),
-        error: '🔥',
+        error: '⛔',
         info: '💡',
+        debug: '🌙',
       ),
     ),
   );
