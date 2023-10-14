@@ -109,22 +109,14 @@ flutter pub run flutter_native_splash:create
 flutter_boilerplate/
 |- assets/                    (assets)
 |- lib/
-  |- configs/                 (flavor config)
-  |- core/                    (bloc observer, theme,...)
-  |- data/                    (repository)
-  |- features/                (features page)
-  |- generated/               (code generation includes localization and assets generation)
-  |- injector/                (dependencies injector)
-  |- l10n/                    (localization resources
-  |- router/                  (routing)
-  |- services/                (app services)
-  |- utils/                   (app utils)
-|- packages/
-  |- rest_client/             (api client)
-  |- local_database/          (local database)
-|- integration_test
-|- test/
-  |- dependencies/                (mock dependencies)
-  |- features/                (bloc test features)
-
+  |- common/                  (common features, ui, util)
+  |- design/                  (design system)
+  |- feature/                 (features)
+    |- home/                  (sample feature)
+  |- l10n/                    (localization)
+  |- service/                 (service group)
+    |- bootstrap/             (about application initialization)
+    |- di/                    (dependency injection)
+  |- export.dart              (common export files)
+  |- main.dart                (app entry point)
 ```
