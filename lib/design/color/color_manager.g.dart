@@ -1,19 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'color_settings.dart';
+part of 'color_manager.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ColorSettingsDataImpl _$$ColorSettingsDataImplFromJson(
+_$ColorManagerDataImpl _$$ColorManagerDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$ColorSettingsDataImpl(
+    _$ColorManagerDataImpl(
       isDarkMode: json['isDarkMode'] as bool? ?? true,
     );
 
-Map<String, dynamic> _$$ColorSettingsDataImplToJson(
-        _$ColorSettingsDataImpl instance) =>
+Map<String, dynamic> _$$ColorManagerDataImplToJson(
+        _$ColorManagerDataImpl instance) =>
     <String, dynamic>{
       'isDarkMode': instance.isDarkMode,
     };

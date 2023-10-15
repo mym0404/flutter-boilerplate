@@ -80,5 +80,7 @@ class TS {
 }
 
 extension TextStyleExtension on TextStyle {
-  TextStyle withColor(Color c) => copyWith(color: c);
+  TextStyle c(Color c) => copyWith(color: c);
+  TextStyle get bold => copyWith(fontWeight: FontWeight.bold);
+  TextStyle get medium => copyWith(fontWeight: FontWeight.w500);
 }

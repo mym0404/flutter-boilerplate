@@ -11,15 +11,17 @@ export 'package:freezed_annotation/freezed_annotation.dart';
 export 'package:gap/gap.dart';
 export 'package:get_it/get_it.dart';
 export 'package:intl/intl.dart' hide TextDirection;
+export 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 export 'package:shared_preferences/shared_preferences.dart';
 export 'package:watch_it/watch_it.dart';
 
-export 'common/ui/widget/app_scaffold.dart';
-export 'common/util/local_storage.dart';
 export 'design/typography/text_style.dart';
-export 'l10n/generated/l10n.dart';
-export 'l10n/util/l10n_util.dart';
+export 'feature/common/ui/widget/app_scaffold.dart';
+export 'feature/common/util/is.dart';
+export 'feature/common/util/local_storage.dart';
 export 'service/di/singleton.dart';
+export 'service/l10n/generated/l10n.dart';
+export 'service/l10n/util/l10n_util.dart';
 
 typedef VC = void Function();
 typedef Json = Map<String, dynamic>;

@@ -1,22 +1,15 @@
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import '../../design/color/color_settings.dart';
+import '../../design/color/color_manager.dart';
 import '../../design/theme.dart';
 import '../../export.dart';
-import '../../feature/home/ui/page/home_page.dart';
-import '../../l10n/util/l10n_settings.dart';
+import '../l10n/util/l10n_manager.dart';
+import '../router/app_router.dart';
 
 Future<void> bootStrap() async {
-  await runZonedGuarded(
-    () async {
-      await registerSingletons();
-      _registerErrorHandler();
-      runApp(const BootStrapApp());
-    },
-    (error, stack) {
-      log.e('Zone Error Occurred', error: error, stackTrace: stack);
-    },
-  );
+  await registerSingletons();
+  _registerErrorHandler();
+  runApp(const BootStrapApp());
 }
 
 void _registerErrorHandler() {
@@ -35,10 +28,11 @@ class BootStrapApp extends StatelessWidget with WatchItMixin {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = watchPropertyValue((ColorSettings settings) => settings.isDarkMode);
-    var locale = watchPropertyValue((L10NSettings settings) => settings.locale);
+    var isDarkMode = watchPropertyValue((ColorManager settings) => settings.isDarkMode);
+    var locale = watchPropertyValue((L10NManager settings) => settings.locale);
 
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: appRouter,
       locale: locale,
       localizationsDelegates: const [
         S.delegate,
@@ -50,7 +44,6 @@ class BootStrapApp extends StatelessWidget with WatchItMixin {
       theme: AppTheme.instance.createTheme(Brightness.light),
       darkTheme: AppTheme.instance.createTheme(Brightness.dark),
       themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      home: const HomePage(),
     );
   }
 }

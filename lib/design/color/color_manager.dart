@@ -2,24 +2,23 @@ import 'package:local_file_preferences/local_file_preferences.dart';
 
 import '../../export.dart';
 
-part 'color_settings.freezed.dart';
-part 'color_settings.g.dart';
+part 'color_manager.freezed.dart';
+part 'color_manager.g.dart';
 part 'theme_colors.dart';
 
 @freezed
-class ColorSettingsData with _$ColorSettingsData {
-  const ColorSettingsData._();
-  const factory ColorSettingsData({
+class ColorManagerData with _$ColorManagerData {
+  const ColorManagerData._();
+  const factory ColorManagerData({
     @Default(true) bool isDarkMode,
-  }) = _ColorSettingsData;
+  }) = _ColorManagerData;
 
-  factory ColorSettingsData.fromJson(Map<String, dynamic> json) =>
-      _$ColorSettingsDataFromJson(json);
+  factory ColorManagerData.fromJson(Map<String, dynamic> json) => _$ColorManagerDataFromJson(json);
 }
 
-class ColorSettings with LocalFilePrefMixin<ColorSettingsData> {
+class ColorManager with LocalFilePrefMixin<ColorManagerData> {
   @override
-  ColorSettingsData get fallback => const ColorSettingsData();
+  ColorManagerData get fallback => const ColorManagerData();
 
   @override
   String get fileName => 'color_settings.dat';
@@ -27,7 +26,7 @@ class ColorSettings with LocalFilePrefMixin<ColorSettingsData> {
   @override
   Map<String, dynamic> toJson() => value.toJson();
   @override
-  ColorSettingsData fromJson(Json json) => ColorSettingsData.fromJson(json);
+  ColorManagerData fromJson(Json json) => ColorManagerData.fromJson(json);
 
   bool get isDarkMode => value.isDarkMode;
   ColorScheme get colorScheme => isDarkMode ? _appColorSchemeDark : _appColorSchemeLight;

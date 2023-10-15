@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'color_settings.dart';
+part of 'color_manager.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,33 +14,33 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-ColorSettingsData _$ColorSettingsDataFromJson(Map<String, dynamic> json) {
-  return _ColorSettingsData.fromJson(json);
+ColorManagerData _$ColorManagerDataFromJson(Map<String, dynamic> json) {
+  return _ColorManagerData.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ColorSettingsData {
+mixin _$ColorManagerData {
   bool get isDarkMode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ColorSettingsDataCopyWith<ColorSettingsData> get copyWith =>
+  $ColorManagerDataCopyWith<ColorManagerData> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ColorSettingsDataCopyWith<$Res> {
-  factory $ColorSettingsDataCopyWith(
-          ColorSettingsData value, $Res Function(ColorSettingsData) then) =
-      _$ColorSettingsDataCopyWithImpl<$Res, ColorSettingsData>;
+abstract class $ColorManagerDataCopyWith<$Res> {
+  factory $ColorManagerDataCopyWith(
+          ColorManagerData value, $Res Function(ColorManagerData) then) =
+      _$ColorManagerDataCopyWithImpl<$Res, ColorManagerData>;
   @useResult
   $Res call({bool isDarkMode});
 }
 
 /// @nodoc
-class _$ColorSettingsDataCopyWithImpl<$Res, $Val extends ColorSettingsData>
-    implements $ColorSettingsDataCopyWith<$Res> {
-  _$ColorSettingsDataCopyWithImpl(this._value, this._then);
+class _$ColorManagerDataCopyWithImpl<$Res, $Val extends ColorManagerData>
+    implements $ColorManagerDataCopyWith<$Res> {
+  _$ColorManagerDataCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -62,22 +62,22 @@ class _$ColorSettingsDataCopyWithImpl<$Res, $Val extends ColorSettingsData>
 }
 
 /// @nodoc
-abstract class _$$ColorSettingsDataImplCopyWith<$Res>
-    implements $ColorSettingsDataCopyWith<$Res> {
-  factory _$$ColorSettingsDataImplCopyWith(_$ColorSettingsDataImpl value,
-          $Res Function(_$ColorSettingsDataImpl) then) =
-      __$$ColorSettingsDataImplCopyWithImpl<$Res>;
+abstract class _$$ColorManagerDataImplCopyWith<$Res>
+    implements $ColorManagerDataCopyWith<$Res> {
+  factory _$$ColorManagerDataImplCopyWith(_$ColorManagerDataImpl value,
+          $Res Function(_$ColorManagerDataImpl) then) =
+      __$$ColorManagerDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({bool isDarkMode});
 }
 
 /// @nodoc
-class __$$ColorSettingsDataImplCopyWithImpl<$Res>
-    extends _$ColorSettingsDataCopyWithImpl<$Res, _$ColorSettingsDataImpl>
-    implements _$$ColorSettingsDataImplCopyWith<$Res> {
-  __$$ColorSettingsDataImplCopyWithImpl(_$ColorSettingsDataImpl _value,
-      $Res Function(_$ColorSettingsDataImpl) _then)
+class __$$ColorManagerDataImplCopyWithImpl<$Res>
+    extends _$ColorManagerDataCopyWithImpl<$Res, _$ColorManagerDataImpl>
+    implements _$$ColorManagerDataImplCopyWith<$Res> {
+  __$$ColorManagerDataImplCopyWithImpl(_$ColorManagerDataImpl _value,
+      $Res Function(_$ColorManagerDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$ColorSettingsDataImplCopyWithImpl<$Res>
   $Res call({
     Object? isDarkMode = null,
   }) {
-    return _then(_$ColorSettingsDataImpl(
+    return _then(_$ColorManagerDataImpl(
       isDarkMode: null == isDarkMode
           ? _value.isDarkMode
           : isDarkMode // ignore: cast_nullable_to_non_nullable
@@ -96,12 +96,12 @@ class __$$ColorSettingsDataImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ColorSettingsDataImpl extends _ColorSettingsData
+class _$ColorManagerDataImpl extends _ColorManagerData
     with DiagnosticableTreeMixin {
-  const _$ColorSettingsDataImpl({this.isDarkMode = true}) : super._();
+  const _$ColorManagerDataImpl({this.isDarkMode = true}) : super._();
 
-  factory _$ColorSettingsDataImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ColorSettingsDataImplFromJson(json);
+  factory _$ColorManagerDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ColorManagerDataImplFromJson(json);
 
   @override
   @JsonKey()
@@ -109,14 +109,14 @@ class _$ColorSettingsDataImpl extends _ColorSettingsData
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ColorSettingsData(isDarkMode: $isDarkMode)';
+    return 'ColorManagerData(isDarkMode: $isDarkMode)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'ColorSettingsData'))
+      ..add(DiagnosticsProperty('type', 'ColorManagerData'))
       ..add(DiagnosticsProperty('isDarkMode', isDarkMode));
   }
 
@@ -124,7 +124,7 @@ class _$ColorSettingsDataImpl extends _ColorSettingsData
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ColorSettingsDataImpl &&
+            other is _$ColorManagerDataImpl &&
             (identical(other.isDarkMode, isDarkMode) ||
                 other.isDarkMode == isDarkMode));
   }
@@ -136,30 +136,30 @@ class _$ColorSettingsDataImpl extends _ColorSettingsData
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ColorSettingsDataImplCopyWith<_$ColorSettingsDataImpl> get copyWith =>
-      __$$ColorSettingsDataImplCopyWithImpl<_$ColorSettingsDataImpl>(
+  _$$ColorManagerDataImplCopyWith<_$ColorManagerDataImpl> get copyWith =>
+      __$$ColorManagerDataImplCopyWithImpl<_$ColorManagerDataImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ColorSettingsDataImplToJson(
+    return _$$ColorManagerDataImplToJson(
       this,
     );
   }
 }
 
-abstract class _ColorSettingsData extends ColorSettingsData {
-  const factory _ColorSettingsData({final bool isDarkMode}) =
-      _$ColorSettingsDataImpl;
-  const _ColorSettingsData._() : super._();
+abstract class _ColorManagerData extends ColorManagerData {
+  const factory _ColorManagerData({final bool isDarkMode}) =
+      _$ColorManagerDataImpl;
+  const _ColorManagerData._() : super._();
 
-  factory _ColorSettingsData.fromJson(Map<String, dynamic> json) =
-      _$ColorSettingsDataImpl.fromJson;
+  factory _ColorManagerData.fromJson(Map<String, dynamic> json) =
+      _$ColorManagerDataImpl.fromJson;
 
   @override
   bool get isDarkMode;
   @override
   @JsonKey(ignore: true)
-  _$$ColorSettingsDataImplCopyWith<_$ColorSettingsDataImpl> get copyWith =>
+  _$$ColorManagerDataImplCopyWith<_$ColorManagerDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

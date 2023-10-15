@@ -22,6 +22,7 @@ analyzer:
     strict-inference: true
     strict-casts: false
 
+
   errors:
     prefer_single_quotes: error
     always_use_package_imports: error
@@ -37,6 +38,7 @@ analyzer:
     unused_element: warning
     prefer_relative_imports: error
     directives_ordering: error
+    prefer_final_locals: error
 
 
 linter:
@@ -63,6 +65,7 @@ linter:
     require_trailing_commas: true
     empty_catches: false
     directives_ordering: true
+    prefer_final_locals: false
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

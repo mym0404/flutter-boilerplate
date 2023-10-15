@@ -47,6 +47,7 @@ dependencies:
   shared_preferences: ^2.2.2
   json_annotation: ^4.8.1
   local_file_preferences: ^1.0.0
+  material_design_icons_flutter: ^7.0.7296
 
 dev_dependencies:
   flutter_test:
@@ -109,8 +110,8 @@ flutter:
 flutter_intl:
   enabled: false # Set true if you needed
   main_locale: en
-  arb_dir: lib/l10n/arb
-  output_dir: lib/l10n/generated
+  arb_dir: lib/service/l10n/arb
+  output_dir: lib/service/l10n/generated
 
 flutter_gen:
   output: lib/assets/

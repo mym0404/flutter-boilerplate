@@ -1,5 +1,5 @@
 import '../export.dart';
-import 'color/color_settings.dart';
+import 'color/color_manager.dart';
 
 class AppTheme {
   static final AppTheme instance = AppTheme._internal();
@@ -24,7 +24,7 @@ class AppTheme {
   );
 
   ThemeData createTheme(Brightness brightness) {
-    ColorScheme colorScheme = di<ColorSettings>().getColorSchemeByBrightness(brightness);
+    ColorScheme colorScheme = di<ColorManager>().getColorSchemeByBrightness(brightness);
 
     return ThemeData(
       colorScheme: colorScheme,
