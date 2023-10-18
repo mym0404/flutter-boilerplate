@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 import '../../export.dart';
-import '../../feature/common/util/size_converter.dart';
+import '../../feature/common/util/size_json_converter.dart';
 
 part 'layout_manager.freezed.dart';
 part 'layout_manager.g.dart';

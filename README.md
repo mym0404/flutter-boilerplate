@@ -85,7 +85,7 @@ https://github.com/mym0404/flutter_boilerplate.git
 ```
 
 **Step 2:**
-
+ 
 ```cmd
 # get pub dependencies
 flutter pub get
