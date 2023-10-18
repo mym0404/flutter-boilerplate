@@ -1,5 +1,4 @@
 import '../../export.dart';
-import '../theme.dart';
 
 class LightTheme extends StatelessWidget {
   const LightTheme({

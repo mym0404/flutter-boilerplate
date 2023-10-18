@@ -59,6 +59,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Welcome`
+  String get homeTitle {
+    return Intl.message(
+      'Welcome',
+      name: 'homeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to Flutter Boilerplate project\nThis can be your very good start point.`
+  String get homeBody {
+    return Intl.message(
+      'Welcome to Flutter Boilerplate project\nThis can be your very good start point.',
+      name: 'homeBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Go Detail`
+  String get homeNavigateDetailButton {
+    return Intl.message(
+      'Go Detail',
+      name: 'homeNavigateDetailButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Detail`
+  String get detailTitle {
+    return Intl.message(
+      'Detail',
+      name: 'detailTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Setting`
+  String get settingTitle {
+    return Intl.message(
+      'Setting',
+      name: 'settingTitle',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

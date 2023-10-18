@@ -1,9 +1,23 @@
 import 'dart:ui';
 
 import '../../export.dart';
+import '../../feature/common/util/size_converter.dart';
 
-class LayoutManager {
-  final size = ValueNotifier(Size.zero);
+part 'layout_manager.freezed.dart';
+part 'layout_manager.g.dart';
+
+@freezed
+class LayoutData with _$LayoutData {
+  const LayoutData._();
+  const factory LayoutData({@Default(Size.zero) @SizeJsonConverter() Size size}) = _LayoutData;
+
+  factory LayoutData.fromJson(Map<String, dynamic> json) => _$LayoutDataFromJson(json);
+}
+
+class LayoutManager extends ValueNotifier<LayoutData> {
+  LayoutManager([LayoutData value = const LayoutData()]) : super(value);
+
+  Size get size => value.size;
   Display get display => PlatformDispatcher.instance.displays.first;
 
   /// Indicates which orientations the app will allow be default. Affects Android/iOS devices only.
@@ -25,7 +39,7 @@ class LayoutManager {
     bool isSmall = display.size.shortestSide / display.devicePixelRatio < 600;
     supportedOrientations = isSmall ? [Axis.vertical] : [Axis.vertical, Axis.horizontal];
     _updateSystemOrientation();
-    this.size.value = size;
+    value = value.copyWith(size: size);
   }
 
   /// Enable landscape, portrait or both. Views can call this method to override the default settings.
@@ -39,10 +53,14 @@ class LayoutManager {
       orientations.addAll([
         DeviceOrientation.portraitUp,
         DeviceOrientation.portraitDown,
+        DeviceOrientation.landscapeLeft,
+        DeviceOrientation.landscapeRight,
       ]);
     }
     if (axisList.contains(Axis.horizontal)) {
       orientations.addAll([
+        DeviceOrientation.landscapeLeft,
+        DeviceOrientation.landscapeRight,
         DeviceOrientation.landscapeLeft,
         DeviceOrientation.landscapeRight,
       ]);

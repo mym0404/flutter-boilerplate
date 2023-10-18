@@ -15,6 +15,7 @@ export 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 export 'package:shared_preferences/shared_preferences.dart';
 export 'package:watch_it/watch_it.dart';
 
+export 'design/theme.dart';
 export 'design/typography/text_style.dart';
 export 'feature/common/ui/widget/app_scaffold.dart';
 export 'feature/common/util/is.dart';
