@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import '../../export.dart';
+import '../../feature/common/util/edge_insets_json_converter.dart';
 import '../../feature/common/util/size_json_converter.dart';
 
 part 'layout_manager.freezed.dart';
@@ -9,7 +10,12 @@ part 'layout_manager.g.dart';
 @freezed
 class LayoutData with _$LayoutData {
   const LayoutData._();
-  const factory LayoutData({@Default(Size.zero) @SizeJsonConverter() Size size}) = _LayoutData;
+  const factory LayoutData({
+    @Default(Size.zero) @SizeJsonConverter() Size size,
+    @Default(EdgeInsets.zero) @EdgeInsetsJsonConverter() EdgeInsets padding,
+    @Default(EdgeInsets.zero) @EdgeInsetsJsonConverter() EdgeInsets viewPadding,
+    @Default(EdgeInsets.zero) @EdgeInsetsJsonConverter() EdgeInsets viewInsets,
+  }) = _LayoutData;
 
   factory LayoutData.fromJson(Map<String, dynamic> json) => _$LayoutDataFromJson(json);
 }
@@ -18,6 +24,8 @@ class LayoutManager extends ValueNotifier<LayoutData> {
   LayoutManager([LayoutData value = const LayoutData()]) : super(value);
 
   Size get size => value.size;
+  EdgeInsets get viewPadding => value.viewPadding;
+  EdgeInsets get viewInsets => value.viewInsets;
   Display get display => PlatformDispatcher.instance.displays.first;
 
   /// Indicates which orientations the app will allow be default. Affects Android/iOS devices only.
@@ -34,12 +42,23 @@ class LayoutManager extends ValueNotifier<LayoutData> {
     }
   }
 
-  void onSizeChanged(Size size) {
+  void onSizeChanged({
+    required Size size,
+    required EdgeInsets padding,
+    required EdgeInsets viewPadding,
+    required EdgeInsets viewInsets,
+  }) {
     /// Disable landscape layout on smaller form factors
     bool isSmall = display.size.shortestSide / display.devicePixelRatio < 600;
     supportedOrientations = isSmall ? [Axis.vertical] : [Axis.vertical, Axis.horizontal];
     _updateSystemOrientation();
-    value = value.copyWith(size: size);
+    value = value.copyWith(
+      size: size,
+      padding: padding,
+      viewPadding: viewPadding,
+      viewInsets: viewInsets,
+    );
+    log.i('$size $padding $viewPadding $viewInsets');
   }
 
   /// Enable landscape, portrait or both. Views can call this method to override the default settings.

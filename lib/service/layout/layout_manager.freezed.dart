@@ -22,6 +22,12 @@ LayoutData _$LayoutDataFromJson(Map<String, dynamic> json) {
 mixin _$LayoutData {
   @SizeJsonConverter()
   Size get size => throw _privateConstructorUsedError;
+  @EdgeInsetsJsonConverter()
+  EdgeInsets get padding => throw _privateConstructorUsedError;
+  @EdgeInsetsJsonConverter()
+  EdgeInsets get viewPadding => throw _privateConstructorUsedError;
+  @EdgeInsetsJsonConverter()
+  EdgeInsets get viewInsets => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +41,11 @@ abstract class $LayoutDataCopyWith<$Res> {
           LayoutData value, $Res Function(LayoutData) then) =
       _$LayoutDataCopyWithImpl<$Res, LayoutData>;
   @useResult
-  $Res call({@SizeJsonConverter() Size size});
+  $Res call(
+      {@SizeJsonConverter() Size size,
+      @EdgeInsetsJsonConverter() EdgeInsets padding,
+      @EdgeInsetsJsonConverter() EdgeInsets viewPadding,
+      @EdgeInsetsJsonConverter() EdgeInsets viewInsets});
 }
 
 /// @nodoc
@@ -52,12 +62,27 @@ class _$LayoutDataCopyWithImpl<$Res, $Val extends LayoutData>
   @override
   $Res call({
     Object? size = null,
+    Object? padding = null,
+    Object? viewPadding = null,
+    Object? viewInsets = null,
   }) {
     return _then(_value.copyWith(
       size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
               as Size,
+      padding: null == padding
+          ? _value.padding
+          : padding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets,
+      viewPadding: null == viewPadding
+          ? _value.viewPadding
+          : viewPadding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets,
+      viewInsets: null == viewInsets
+          ? _value.viewInsets
+          : viewInsets // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets,
     ) as $Val);
   }
 }
@@ -70,7 +95,11 @@ abstract class _$$LayoutDataImplCopyWith<$Res>
       __$$LayoutDataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@SizeJsonConverter() Size size});
+  $Res call(
+      {@SizeJsonConverter() Size size,
+      @EdgeInsetsJsonConverter() EdgeInsets padding,
+      @EdgeInsetsJsonConverter() EdgeInsets viewPadding,
+      @EdgeInsetsJsonConverter() EdgeInsets viewInsets});
 }
 
 /// @nodoc
@@ -85,12 +114,27 @@ class __$$LayoutDataImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? size = null,
+    Object? padding = null,
+    Object? viewPadding = null,
+    Object? viewInsets = null,
   }) {
     return _then(_$LayoutDataImpl(
       size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
               as Size,
+      padding: null == padding
+          ? _value.padding
+          : padding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets,
+      viewPadding: null == viewPadding
+          ? _value.viewPadding
+          : viewPadding // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets,
+      viewInsets: null == viewInsets
+          ? _value.viewInsets
+          : viewInsets // ignore: cast_nullable_to_non_nullable
+              as EdgeInsets,
     ));
   }
 }
@@ -98,7 +142,11 @@ class __$$LayoutDataImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$LayoutDataImpl extends _LayoutData with DiagnosticableTreeMixin {
-  const _$LayoutDataImpl({@SizeJsonConverter() this.size = Size.zero})
+  const _$LayoutDataImpl(
+      {@SizeJsonConverter() this.size = Size.zero,
+      @EdgeInsetsJsonConverter() this.padding = EdgeInsets.zero,
+      @EdgeInsetsJsonConverter() this.viewPadding = EdgeInsets.zero,
+      @EdgeInsetsJsonConverter() this.viewInsets = EdgeInsets.zero})
       : super._();
 
   factory _$LayoutDataImpl.fromJson(Map<String, dynamic> json) =>
@@ -108,10 +156,22 @@ class _$LayoutDataImpl extends _LayoutData with DiagnosticableTreeMixin {
   @JsonKey()
   @SizeJsonConverter()
   final Size size;
+  @override
+  @JsonKey()
+  @EdgeInsetsJsonConverter()
+  final EdgeInsets padding;
+  @override
+  @JsonKey()
+  @EdgeInsetsJsonConverter()
+  final EdgeInsets viewPadding;
+  @override
+  @JsonKey()
+  @EdgeInsetsJsonConverter()
+  final EdgeInsets viewInsets;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'LayoutData(size: $size)';
+    return 'LayoutData(size: $size, padding: $padding, viewPadding: $viewPadding, viewInsets: $viewInsets)';
   }
 
   @override
@@ -119,7 +179,10 @@ class _$LayoutDataImpl extends _LayoutData with DiagnosticableTreeMixin {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'LayoutData'))
-      ..add(DiagnosticsProperty('size', size));
+      ..add(DiagnosticsProperty('size', size))
+      ..add(DiagnosticsProperty('padding', padding))
+      ..add(DiagnosticsProperty('viewPadding', viewPadding))
+      ..add(DiagnosticsProperty('viewInsets', viewInsets));
   }
 
   @override
@@ -127,12 +190,18 @@ class _$LayoutDataImpl extends _LayoutData with DiagnosticableTreeMixin {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LayoutDataImpl &&
-            (identical(other.size, size) || other.size == size));
+            (identical(other.size, size) || other.size == size) &&
+            (identical(other.padding, padding) || other.padding == padding) &&
+            (identical(other.viewPadding, viewPadding) ||
+                other.viewPadding == viewPadding) &&
+            (identical(other.viewInsets, viewInsets) ||
+                other.viewInsets == viewInsets));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, size);
+  int get hashCode =>
+      Object.hash(runtimeType, size, padding, viewPadding, viewInsets);
 
   @JsonKey(ignore: true)
   @override
@@ -149,7 +218,11 @@ class _$LayoutDataImpl extends _LayoutData with DiagnosticableTreeMixin {
 }
 
 abstract class _LayoutData extends LayoutData {
-  const factory _LayoutData({@SizeJsonConverter() final Size size}) =
+  const factory _LayoutData(
+          {@SizeJsonConverter() final Size size,
+          @EdgeInsetsJsonConverter() final EdgeInsets padding,
+          @EdgeInsetsJsonConverter() final EdgeInsets viewPadding,
+          @EdgeInsetsJsonConverter() final EdgeInsets viewInsets}) =
       _$LayoutDataImpl;
   const _LayoutData._() : super._();
 
@@ -159,6 +232,15 @@ abstract class _LayoutData extends LayoutData {
   @override
   @SizeJsonConverter()
   Size get size;
+  @override
+  @EdgeInsetsJsonConverter()
+  EdgeInsets get padding;
+  @override
+  @EdgeInsetsJsonConverter()
+  EdgeInsets get viewPadding;
+  @override
+  @EdgeInsetsJsonConverter()
+  EdgeInsets get viewInsets;
   @override
   @JsonKey(ignore: true)
   _$$LayoutDataImplCopyWith<_$LayoutDataImpl> get copyWith =>

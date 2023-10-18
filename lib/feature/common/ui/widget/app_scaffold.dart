@@ -21,7 +21,12 @@ class AppScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     if (!isUsageSubContainer) {
       var mq = MediaQuery.of(context);
-      di<LayoutManager>().onSizeChanged(mq.size);
+      di<LayoutManager>().onSizeChanged(
+        size: mq.size,
+        padding: mq.padding,
+        viewPadding: mq.viewPadding,
+        viewInsets: mq.viewInsets,
+      );
     }
 
     return DefaultTextStyle(
