@@ -6,17 +6,26 @@ class AppScaffold extends StatelessWidget {
   const AppScaffold({
     Key? key,
     required this.child,
+    this.isUsageSubContainer = false,
   }) : super(key: key);
 
   final Widget child;
+  final bool isUsageSubContainer;
+
+  const AppScaffold.subContainer({
+    Key? key,
+    required Widget child,
+  }) : this(key: key, child: child, isUsageSubContainer: true);
 
   @override
   Widget build(BuildContext context) {
-    var mq = MediaQuery.of(context);
-    di<LayoutManager>().onSizeChanged(mq.size);
+    if (!isUsageSubContainer) {
+      var mq = MediaQuery.of(context);
+      di<LayoutManager>().onSizeChanged(mq.size);
+    }
 
     return DefaultTextStyle(
-      style: TS.displayLarge,
+      style: TS.bodyMedium,
       child: ScrollConfiguration(
         behavior: AppScrollBehavior(),
         child: child,
