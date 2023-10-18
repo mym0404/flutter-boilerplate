@@ -91,16 +91,16 @@ https://github.com/mym0404/flutter_boilerplate.git
 flutter pub get
 
 # generate localization  
-flutter pub run intl_utils:generate
+dart run intl_utils:generate
 
 # generate ...
-flutter pub run build_runner build --delete-conflicting-outputs
+dart run build_runner build --delete-conflicting-outputs
 
 # generate launcher icon
-flutter pub run flutter_launcher_icons
+dart run flutter_launcher_icons
 
 # generate splash screen
-flutter pub run flutter_native_splash:create
+dart run flutter_native_splash:create
 ```
 
 

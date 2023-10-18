@@ -16,6 +16,36 @@ final appRouter = GoRouter(
       navigatorKey: _shellNavigatorKey,
       builder: (context, state, child) => AppScaffold(child: child),
       routes: [
+        StatefulShellRoute.indexedStack(
+          parentNavigatorKey: _rootNavigatorKey,
+          pageBuilder: (context, state, navigationShell) {
+            return _createPage(
+              context,
+              state,
+              builder: (_) => MainDrawerNavigator(child: navigationShell),
+            );
+          },
+          branches: [
+            StatefulShellBranch(
+              routes: [
+                AppRoute(
+                  '/',
+                  (_) => const HomePage(),
+                  routes: [],
+                ),
+              ],
+            ),
+            StatefulShellBranch(
+              routes: [
+                AppRoute(
+                  '/setting',
+                  (_) => const SettingPage(),
+                  routes: [],
+                ),
+              ],
+            ),
+          ],
+        ),
         AppRoute(
           '/',
           (_) => const HomePage(),
