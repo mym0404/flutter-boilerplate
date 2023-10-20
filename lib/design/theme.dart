@@ -24,7 +24,8 @@ class AppTheme {
   );
 
   ThemeData createTheme(Brightness brightness) {
-    ColorScheme colorScheme = di<ColorManager>().getColorSchemeByBrightness(brightness);
+    ColorScheme colorScheme =
+        di<ColorManager>().getColorSchemeByBrightness(brightness);
 
     return ThemeData(
       colorScheme: colorScheme,
@@ -41,6 +42,15 @@ extension BuildContextThemeExtension on BuildContext {
 }
 
 extension ColorSchemeExtension on ColorScheme {
+  Color get surface30 => surface.withOpacity(0.3);
+  Color get surface50 => surface.withOpacity(0.5);
+  Color get surface70 => surface.withOpacity(0.7);
+  Color get onSurface30 => onSurface.withOpacity(0.3);
+  Color get onSurface50 => onSurface.withOpacity(0.5);
+  Color get onSurface70 => onSurface.withOpacity(0.7);
+  Color get primary30 => primary.withOpacity(0.3);
+  Color get primary50 => primary.withOpacity(0.5);
+  Color get primary70 => primary.withOpacity(0.7);
   // Color get surfaceGray =>
   //     brightness == Brightness.light ? const Color(0xFFE5E7EB) : const Color(0xFF3A3A3A);
   // Add mores!
