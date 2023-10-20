@@ -39,6 +39,7 @@ analyzer:
     prefer_relative_imports: error
     directives_ordering: error
     prefer_final_locals: error
+    use_super_parameters: error
 
 
 linter:
@@ -66,6 +67,7 @@ linter:
     empty_catches: false
     directives_ordering: true
     prefer_final_locals: false
+    use_super_parameters: true
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

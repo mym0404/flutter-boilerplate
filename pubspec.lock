@@ -481,10 +481,10 @@ packages:
     dependency: "direct main"
     description:
       name: local_file_preferences
-      sha256: d5eb3f80bb053c2b6faf5e88651f3f92f25e2d78ca57c14575f310b55b2ec826
+      sha256: "4b57bf8b01bdd9f703e1ac77eec2f19c99adc056be0777dc75e70c0dfd0ad00f"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.1"
   logger:
     dependency: "direct main"
     description:
@@ -549,6 +549,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+  padding_extra:
+    dependency: "direct main"
+    description:
+      name: padding_extra
+      sha256: a9ae006f75eae848b0067d552146f406a2dbe0eff5a19ba2439b0b1631c21520
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
   path:
     dependency: transitive
     description:
