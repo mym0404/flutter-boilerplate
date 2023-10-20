@@ -21,7 +21,7 @@ class LayoutData with _$LayoutData {
 }
 
 class LayoutManager extends ValueNotifier<LayoutData> {
-  LayoutManager([LayoutData value = const LayoutData()]) : super(value);
+  LayoutManager([super.value = const LayoutData()]);
 
   Size get size => value.size;
   EdgeInsets get viewPadding => value.viewPadding;

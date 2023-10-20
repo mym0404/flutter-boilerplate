@@ -1,7 +1,6 @@
 import 'package:go_router/go_router.dart';
 
 import '../../../../export.dart';
-import '../../../common/widget/layout/full.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

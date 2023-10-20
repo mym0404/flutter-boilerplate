@@ -2,9 +2,9 @@ import '../../export.dart';
 
 class LightTheme extends StatelessWidget {
   const LightTheme({
-    Key? key,
+    super.key,
     required this.child,
-  }) : super(key: key);
+  });
 
   final Widget child;
 

@@ -12,6 +12,7 @@ export 'package:gap/gap.dart';
 export 'package:get_it/get_it.dart';
 export 'package:intl/intl.dart' hide TextDirection;
 export 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+export 'package:padding_extra/padding_extra.dart';
 export 'package:shared_preferences/shared_preferences.dart';
 export 'package:watch_it/watch_it.dart';
 

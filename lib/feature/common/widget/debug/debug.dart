@@ -2,9 +2,9 @@ import '../../../../export.dart';
 
 class Debug extends StatelessWidget {
   const Debug({
-    Key? key,
+    super.key,
     required this.child,
-  }) : super(key: key);
+  });
 
   final Widget child;
 

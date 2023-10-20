@@ -1,7 +1,7 @@
 import '../../../../export.dart';
 
 class DetailPage extends StatelessWidget {
-  const DetailPage({Key? key}) : super(key: key);
+  const DetailPage({super.key});
 
   @override
   Widget build(BuildContext context) {

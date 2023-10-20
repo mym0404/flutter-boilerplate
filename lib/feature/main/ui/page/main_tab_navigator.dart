@@ -5,9 +5,9 @@ import '../../../../service/layout/layout_manager.dart';
 
 class MainTabNavigator extends StatelessWidget with WatchItMixin {
   const MainTabNavigator({
-    Key? key,
+    super.key,
     required this.child,
-  }) : super(key: key);
+  });
 
   final StatefulNavigationShell child;
 

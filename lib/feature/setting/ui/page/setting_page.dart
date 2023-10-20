@@ -2,7 +2,7 @@ import '../../../../design/color/color_manager.dart';
 import '../../../../export.dart';
 
 class SettingPage extends StatelessWidget {
-  const SettingPage({Key? key}) : super(key: key);
+  const SettingPage({super.key});
 
   void _toggleDarkTheme() {
     di<ColorManager>().toggleDarkMode();

@@ -4,10 +4,10 @@ import '../../widget/app_scroll_configuration.dart';
 
 class AppScaffold extends StatelessWidget {
   const AppScaffold({
-    Key? key,
+    super.key,
     required this.child,
     this.isUsageSubContainer = false,
-  }) : super(key: key);
+  });
 
   final Widget child;
   final bool isUsageSubContainer;
