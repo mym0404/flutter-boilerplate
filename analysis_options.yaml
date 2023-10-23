@@ -31,7 +31,7 @@ analyzer:
     annotate_overrides: error
     avoid_init_to_null: error
     use_full_hex_values_for_flutter_colors: error
-    require_trailing_commas: error
+    require_trailing_commas: ignore
     library_private_types_in_public_api: ignore
     inference_failure_on_instance_creation: ignore
     inference_failure_on_function_invocation: ignore
