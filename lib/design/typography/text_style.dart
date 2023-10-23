@@ -18,6 +18,7 @@ class TS {
     height: 44 / 36,
     fontWeight: FontWeight.bold,
   );
+
   static const headLarge = TextStyle(
     fontSize: 32,
     height: 40 / 32,
@@ -34,6 +35,10 @@ class TS {
     fontWeight: FontWeight.w500,
   );
 
+  static const h1 = headLarge;
+  static const h2 = headMedium;
+  static const h3 = headSmall;
+
   static const titleLarge = TextStyle(
     fontSize: 22,
     height: 28 / 22,
@@ -49,6 +54,28 @@ class TS {
     height: 20 / 14,
     fontWeight: FontWeight.w500,
   );
+
+  static const t1 = titleLarge;
+  static const t2 = titleMedium;
+  static const t3 = titleSmall;
+
+  static const bodyLarge = TextStyle(
+    fontSize: 16,
+    height: 24 / 16,
+  );
+  static const bodyMedium = TextStyle(
+    fontSize: 14,
+    height: 20 / 14,
+  );
+  static const bodySmall = TextStyle(
+    fontSize: 12,
+    height: 16 / 12,
+  );
+
+  static const b1 = bodyLarge;
+  static const b2 = bodyMedium;
+  static const b3 = bodySmall;
+
   static const labelLarge = TextStyle(
     fontSize: 14,
     height: 20 / 14,
@@ -65,20 +92,12 @@ class TS {
     fontWeight: FontWeight.w500,
   );
 
-  static const bodyLarge = TextStyle(
-    fontSize: 16,
-    height: 24 / 16,
-  );
-  static const bodyMedium = TextStyle(
-    fontSize: 14,
-    height: 20 / 14,
-  );
-  static const bodySmall = TextStyle(
-    fontSize: 12,
-    height: 16 / 12,
-  );
+  static const l1 = labelLarge;
+  static const l2 = labelMedium;
+  static const l3 = labelSmall;
 
   static const bold = TextStyle(fontWeight: FontWeight.bold);
+  static const medium = TextStyle(fontWeight: FontWeight.w500);
 }
 
 extension TextStyleExtension on TextStyle {
