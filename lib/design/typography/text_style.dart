@@ -77,6 +77,8 @@ class TS {
     fontSize: 12,
     height: 16 / 12,
   );
+
+  static const bold = TextStyle(fontWeight: FontWeight.bold);
 }
 
 extension TextStyleExtension on TextStyle {
