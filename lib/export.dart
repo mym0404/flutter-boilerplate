@@ -16,6 +16,7 @@ export 'package:padding_extra/padding_extra.dart';
 export 'package:shared_preferences/shared_preferences.dart';
 export 'package:watch_it/watch_it.dart';
 
+export 'assets/assets.gen.dart';
 export 'design/theme.dart';
 export 'design/typography/text_style.dart';
 export 'feature/common/ui/widget/app_scaffold.dart';
