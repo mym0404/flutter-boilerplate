@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:go_router/go_router.dart';
 
 import '../../export.dart';
 import '../../feature/detail/ui/screen/detail_page.dart';
@@ -29,22 +28,18 @@ final appRouter = GoRouter(
           branches: [
             StatefulShellBranch(
               routes: [
-                AppRoute(
-                  MainTab.home.path,
-                  (_) => const HomePage(),
-                  routes: [
-                    AppRoute(
-                      'detail',
-                      (_) => const DetailPage(),
-                    ),
-                  ],
-                ),
+                AppRoute('/', (_) => const HomePage(), routes: [
+                  AppRoute(
+                    'detail',
+                    (_) => const DetailPage(),
+                  ),
+                ]),
               ],
             ),
             StatefulShellBranch(
               routes: [
                 AppRoute(
-                  MainTab.settings.path,
+                  '/setting',
                   (_) => const SettingPage(),
                 ),
               ],
@@ -62,28 +57,12 @@ class AppRoute extends GoRoute {
     String path,
     Widget Function(GoRouterState s) builder, {
     List<GoRoute> routes = const [],
-    this.useFade = false,
+    bool useFade = false,
   }) : super(
           path: path,
           routes: routes,
-          pageBuilder: (context, state) {
-            final pageContent = Scaffold(
-              resizeToAvoidBottomInset: false,
-              body: builder(state),
-            );
-            if (useFade) {
-              return CustomTransitionPage(
-                key: state.pageKey,
-                child: pageContent,
-                transitionsBuilder: (context, animation, secondaryAnimation, child) {
-                  return FadeTransition(opacity: animation, child: child);
-                },
-              );
-            }
-            return CupertinoPage(child: pageContent);
-          },
+          pageBuilder: (context, state) => _createPage(context, state, useFade: useFade, builder: builder),
         );
-  final bool useFade;
 }
 
 /// Create page with template

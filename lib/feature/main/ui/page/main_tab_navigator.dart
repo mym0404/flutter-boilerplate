@@ -1,5 +1,3 @@
-import 'package:go_router/go_router.dart';
-
 import '../../../../export.dart';
 import '../../../../service/layout/layout_manager.dart';
 
@@ -57,11 +55,6 @@ enum MainTab {
   home,
   settings,
   ;
-
-  String get path => switch (this) {
-        MainTab.home => '/',
-        MainTab.settings => '/setting',
-      };
 
   IconData get icon => switch (this) {
         MainTab.home => MdiIcons.home,

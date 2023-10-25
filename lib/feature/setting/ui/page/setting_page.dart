@@ -16,17 +16,15 @@ class SettingPage extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          ListTile(
-            title: const Text('Dark Theme'),
-            trailing: ValueListenableBuilder(
-              valueListenable: di<ColorManager>(),
-              builder: (context, value, _) {
-                return Switch(
-                  value: value.isDarkMode,
-                  onChanged: (_) => _toggleDarkTheme(),
-                );
-              },
-            ),
+          ValueListenableBuilder(
+            valueListenable: di<ColorManager>(),
+            builder: (context, value, child) {
+              return SwitchListTile(
+                title: const Text('Dark Theme'),
+                value: value.isDarkMode,
+                onChanged: (_) => _toggleDarkTheme(),
+              );
+            },
           ),
         ],
       ),

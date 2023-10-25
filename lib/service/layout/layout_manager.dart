@@ -58,7 +58,6 @@ class LayoutManager extends ValueNotifier<LayoutData> {
       viewPadding: viewPadding,
       viewInsets: viewInsets,
     );
-    log.i('$size $padding $viewPadding $viewInsets');
   }
 
   /// Enable landscape, portrait or both. Views can call this method to override the default settings.
