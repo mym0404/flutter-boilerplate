@@ -85,8 +85,17 @@ https://github.com/mym0404/flutter_boilerplate.git
 ```
 
 **Step 2:**
- 
+
 ```cmd
+# create iOS Project
+flutter create -i swift --platforms ios --org <your org> --project-name <name> .
+ 
+# create android Project
+flutter create -i swift --platforms android --org <your org> --project-name <name> .
+
+# create web Project
+flutter create --platforms web --project-name <name> .
+
 # get pub dependencies
 flutter pub get
 
