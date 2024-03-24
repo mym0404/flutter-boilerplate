@@ -289,14 +289,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-  extra_alignments:
-    dependency: "direct main"
-    description:
-      name: extra_alignments
-      sha256: cc0425d08b3f1b3404439da939593aa3b7931c6f7f251030632e14337bf79e00
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0+1"
   fake_async:
     dependency: transitive
     description:
@@ -722,10 +714,10 @@ packages:
     dependency: "direct main"
     description:
       name: padding_extra
-      sha256: "316541be8cea33ac8c04b2026fec7b18d3abefa29f99e29982b2c39b0bc4f3c2"
+      sha256: d50637266aee0f3dd6b01bcc2c8f21705e65a183d18f7c10974fbf7094b76143
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.3"
+    version: "1.1.3"
   path:
     dependency: transitive
     description:
