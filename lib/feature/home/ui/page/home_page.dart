@@ -13,6 +13,9 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
+              const Gap(12),
+              Assets.images.logo.image(width: 128, height: 128),
+              const Gap(48),
               Text(
                 context.s.homeBody,
                 textAlign: TextAlign.center,
