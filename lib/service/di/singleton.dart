@@ -8,8 +8,10 @@ import '../layout/layout_manager.dart';
 
 Future<void> registerSingletons() async {
   var sharedPreferences = await SharedPreferences.getInstance();
-  registerGlobalStorage(SharedPreferencesStorage(sharedPreferences: sharedPreferences));
-  di.registerSingleton<LocalStorage>(SharedPreferencesLocalStorage(sharedPreferences));
+  registerGlobalStorage(
+      SharedPreferencesStorage(sharedPreferences: sharedPreferences));
+  di.registerSingleton<LocalStorage>(
+      SharedPreferencesLocalStorage(sharedPreferences));
   di.registerSingleton(ColorManager());
   di.registerSingleton(L10NManager());
   di.registerSingleton(

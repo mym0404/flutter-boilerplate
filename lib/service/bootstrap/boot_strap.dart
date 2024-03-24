@@ -15,7 +15,8 @@ Future<void> bootStrap() async {
 void _registerErrorHandler() {
   FlutterError.onError = (details) {
     FlutterError.presentError(details);
-    log.e('flutter Error Occurred', error: details.exception, stackTrace: details.stack);
+    log.e('flutter Error Occurred',
+        error: details.exception, stackTrace: details.stack);
   };
   PlatformDispatcher.instance.onError = (exception, stackTrace) {
     log.e('Platform Error Occurred', error: exception, stackTrace: stackTrace);
@@ -28,7 +29,8 @@ class BootStrapApp extends StatelessWidget with WatchItMixin {
 
   @override
   Widget build(BuildContext context) {
-    var isDarkMode = watchPropertyValue((ColorManager settings) => settings.isDarkMode);
+    var isDarkMode =
+        watchPropertyValue((ColorManager settings) => settings.isDarkMode);
     var locale = watchPropertyValue((L10NManager settings) => settings.locale);
 
     return MaterialApp.router(

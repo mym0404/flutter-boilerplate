@@ -11,7 +11,8 @@ abstract interface class LocalStorage {
 }
 
 class SharedPreferencesLocalStorage implements LocalStorage {
-  SharedPreferencesLocalStorage(SharedPreferences sharedPreferences) : _sp = sharedPreferences;
+  SharedPreferencesLocalStorage(SharedPreferences sharedPreferences)
+      : _sp = sharedPreferences;
   final SharedPreferences _sp;
 
   @override

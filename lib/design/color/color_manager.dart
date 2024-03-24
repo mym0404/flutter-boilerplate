@@ -13,7 +13,8 @@ class ColorManagerData with _$ColorManagerData {
     @Default(true) bool isDarkMode,
   }) = _ColorManagerData;
 
-  factory ColorManagerData.fromJson(Map<String, dynamic> json) => _$ColorManagerDataFromJson(json);
+  factory ColorManagerData.fromJson(Map<String, dynamic> json) =>
+      _$ColorManagerDataFromJson(json);
 }
 
 class ColorManager with LocalFilePrefMixin<ColorManagerData> {
@@ -29,11 +30,15 @@ class ColorManager with LocalFilePrefMixin<ColorManagerData> {
   ColorManagerData fromJson(Json json) => ColorManagerData.fromJson(json);
 
   bool get isDarkMode => value.isDarkMode;
-  ColorScheme get colorScheme => isDarkMode ? _appColorSchemeDark : _appColorSchemeLight;
+  ColorScheme get colorScheme =>
+      isDarkMode ? _appColorSchemeDark : _appColorSchemeLight;
 
   ColorScheme getColorSchemeByBrightness(Brightness brightness) =>
-      brightness == Brightness.light ? _appColorSchemeLight : _appColorSchemeDark;
+      brightness == Brightness.light
+          ? _appColorSchemeLight
+          : _appColorSchemeDark;
 
-  void setDarkMode(bool isDarkMode) => value = value.copyWith(isDarkMode: isDarkMode);
+  void setDarkMode(bool isDarkMode) =>
+      value = value.copyWith(isDarkMode: isDarkMode);
   void toggleDarkMode() => value = value.copyWith(isDarkMode: !isDarkMode);
 }

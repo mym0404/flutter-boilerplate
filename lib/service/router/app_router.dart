@@ -61,7 +61,8 @@ class AppRoute extends GoRoute {
   }) : super(
           path: path,
           routes: routes,
-          pageBuilder: (context, state) => _createPage(context, state, useFade: useFade, builder: builder),
+          pageBuilder: (context, state) =>
+              _createPage(context, state, useFade: useFade, builder: builder),
         );
 }
 

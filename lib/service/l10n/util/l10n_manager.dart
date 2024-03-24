@@ -17,8 +17,9 @@ class L10NManager with LocalFilePrefMixin<L10NManagerValue> {
   }
 
   @override
-  L10NManagerValue get fallback =>
-      Intl.getCurrentLocale().startsWith('en') ? L10NManagerValue.enUS : L10NManagerValue.ko;
+  L10NManagerValue get fallback => Intl.getCurrentLocale().startsWith('en')
+      ? L10NManagerValue.enUS
+      : L10NManagerValue.ko;
 
   @override
   String get fileName => 'L10N_settings.dat';
@@ -28,7 +29,8 @@ class L10NManager with LocalFilePrefMixin<L10NManagerValue> {
 
   @override
   L10NManagerValue fromJson(Json json) =>
-      L10NManagerValue.values.firstWhereOrNull((element) => element.name == json['locale']) ??
+      L10NManagerValue.values
+          .firstWhereOrNull((element) => element.name == json['locale']) ??
       L10NManagerValue.enUS;
 
   Future<void> changeLocale(L10NManagerValue value) async {

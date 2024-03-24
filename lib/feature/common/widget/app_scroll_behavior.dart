@@ -11,7 +11,8 @@ class AppScrollBehavior extends ScrollBehavior {
   }
 
   @override
-  ScrollPhysics getScrollPhysics(BuildContext context) => const BouncingScrollPhysics();
+  ScrollPhysics getScrollPhysics(BuildContext context) =>
+      const BouncingScrollPhysics();
 
   @override
   Widget buildScrollbar(

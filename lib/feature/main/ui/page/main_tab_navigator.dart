@@ -11,12 +11,14 @@ class MainTabNavigator extends StatelessWidget with WatchItMixin {
 
   @override
   Widget build(BuildContext context) {
-    var isWideScreen = watchPropertyValue((LayoutManager layout) => layout.size).width >= 600;
+    var isWideScreen =
+        watchPropertyValue((LayoutManager layout) => layout.size).width >= 600;
 
     if (isWideScreen) {
       var destinations = MainTab.values
           .map(
-            (tab) => NavigationRailDestination(icon: Icon(tab.icon), label: Text(tab.name)),
+            (tab) => NavigationRailDestination(
+                icon: Icon(tab.icon), label: Text(tab.name)),
           )
           .toList();
 
@@ -35,7 +37,8 @@ class MainTabNavigator extends StatelessWidget with WatchItMixin {
     } else {
       var destinations = MainTab.values
           .map(
-            (tab) => NavigationDestination(icon: Icon(tab.icon), label: tab.name),
+            (tab) =>
+                NavigationDestination(icon: Icon(tab.icon), label: tab.name),
           )
           .toList();
 

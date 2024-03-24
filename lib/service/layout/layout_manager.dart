@@ -17,7 +17,8 @@ class LayoutData with _$LayoutData {
     @Default(EdgeInsets.zero) @EdgeInsetsJsonConverter() EdgeInsets viewInsets,
   }) = _LayoutData;
 
-  factory LayoutData.fromJson(Map<String, dynamic> json) => _$LayoutDataFromJson(json);
+  factory LayoutData.fromJson(Map<String, dynamic> json) =>
+      _$LayoutDataFromJson(json);
 }
 
 class LayoutManager extends ValueNotifier<LayoutData> {
@@ -50,7 +51,8 @@ class LayoutManager extends ValueNotifier<LayoutData> {
   }) {
     /// Disable landscape layout on smaller form factors
     bool isSmall = display.size.shortestSide / display.devicePixelRatio < 600;
-    supportedOrientations = isSmall ? [Axis.vertical] : [Axis.vertical, Axis.horizontal];
+    supportedOrientations =
+        isSmall ? [Axis.vertical] : [Axis.vertical, Axis.horizontal];
     _updateSystemOrientation();
     value = value.copyWith(
       size: size,
