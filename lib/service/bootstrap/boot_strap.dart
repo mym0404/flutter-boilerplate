@@ -1,4 +1,5 @@
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import '../../design/color/color_manager.dart';
 import '../../export.dart';
@@ -9,7 +10,7 @@ import '../router/app_router.dart';
 Future<void> bootStrap() async {
   await registerSingletons();
   _registerErrorHandler();
-  runApp(const BootStrapApp());
+  runApp(const ProviderScope(child: BootStrapApp()));
 }
 
 void _registerErrorHandler() {

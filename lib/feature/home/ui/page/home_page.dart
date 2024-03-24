@@ -1,10 +1,27 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
+
 import '../../../../export.dart';
 
-class HomePage extends StatelessWidget {
+part 'home_page.g.dart';
+
+@riverpod
+class Counter extends _$Counter {
+  @override
+  int build() {
+    return 0;
+  }
+
+  void increase() {
+    state++;
+  }
+}
+
+class HomePage extends HookConsumerWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
         title: Text(context.s.homeTitle),
@@ -28,6 +45,15 @@ class HomePage extends StatelessWidget {
                 },
                 child: Text(context.s.homeNavigateDetailButton),
               ),
+              const Gap(48),
+              Text(ref.watch(counterProvider).toString()),
+              const Gap(12),
+              ElevatedButton(
+                onPressed: () {
+                  ref.read(counterProvider.notifier).increase();
+                },
+                child: const Text('+'),
+              )
             ],
           ),
         ),
